@@ -3,4 +3,5 @@ language: minimal
 sudo: required
 
 script:
+  - apt-get update && apt-get install parallel
   - ./build_deploy.sh
