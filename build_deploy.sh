@@ -94,4 +94,5 @@ docker rmi \
 
 # build all sdk + system variants (in parallel because TravisCI has a 50m timeout)
 export -f build_deploy_sdk_and_system
+export BASEIMAGE
 SHELL=$(type -p bash) parallel -j 2 --keep-order --line-buffer echo Building SDK {}\; build_deploy_sdk_and_system {} ::: $SDKS
