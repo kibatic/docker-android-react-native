@@ -1,5 +1,5 @@
-FROM mreichelt/android:minimal
-LABEL maintainer="mcreichelt@gmail.com"
+FROM kibatic/android-react-native:minimal
+LABEL maintainer="system@kibatic.com"
 
 # get more from `sdkmanager --list` (add '--verbose' to read long package names)
 RUN yes | sdkmanager \

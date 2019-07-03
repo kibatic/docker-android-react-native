@@ -1,5 +1,5 @@
 FROM openjdk:8
-LABEL maintainer="mcreichelt@gmail.com"
+LABEL maintainer="system@kibatic.com"
 
 ENV ANDROID_SDK_URL="https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip" \
     ANT_HOME="/usr/share/ant" \
@@ -26,6 +26,16 @@ RUN mkdir android && cd android && \
     wget --quiet --output-document=tools.zip ${ANDROID_SDK_URL} && \
     unzip -qq tools.zip && \
     rm tools.zip
+
+# Install Node.JS
+RUN echo "Installing Node"&&\
+    apt-get install -qqq -y gnupg2 &&\
+    curl -sL https://deb.nodesource.com/setup_10.x | bash - &&\
+    apt-get install -qqq -y nodejs &&\
+    # Cleanup
+    apt-get purge -qqq -y gnupg2 &&\
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN yes | sdkmanager 'tools' 'platform-tools' > /dev/null
 

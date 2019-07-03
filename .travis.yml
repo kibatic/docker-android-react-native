@@ -1,0 +1,6 @@
+language: minimal
+# Use the new container infrastructure
+sudo: required
+
+script:
+  - ./build_deploy.sh

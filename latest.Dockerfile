@@ -1,5 +1,5 @@
-FROM mreichelt/android:base
-LABEL maintainer="mcreichelt@gmail.com"
+FROM kibatic/android-react-native:base
+LABEL maintainer="system@kibatic.com"
 
 ARG latest_packages
 RUN echo "Installing ${latest_packages}…"

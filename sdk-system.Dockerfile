@@ -1,6 +1,6 @@
 ARG android_sdk_version
-FROM mreichelt/android:${android_sdk_version}
-LABEL maintainer="mcreichelt@gmail.com"
+FROM kibatic/android-react-native:${android_sdk_version}
+LABEL maintainer="system@kibatic.com"
 
 ARG android_sdk_version
 # get more from `sdkmanager --list` (add '--verbose' to read long package names)

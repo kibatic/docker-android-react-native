@@ -1,4 +1,4 @@
-image: mreichelt/android:28
+image: kibatic/android-react-native:28
 
 build:
   stage: build
