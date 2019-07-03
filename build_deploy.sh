@@ -4,8 +4,8 @@
 set -e -o nounset
 
 BASEIMAGE="kibatic/android-react-native"
-SDKS=$(echo {28..21})
-LATEST_SDKS=$(echo {28..26})
+SDKS=$(echo {29..21})
+LATEST_SDKS=$(echo {29..27})
 LATEST_PACKAGES=''; for SDK in $LATEST_SDKS; do LATEST_PACKAGES="platforms;android-${SDK} $LATEST_PACKAGES"; done
 
 echo "SDKS = $SDKS"
