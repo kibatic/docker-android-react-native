@@ -60,7 +60,7 @@ build_deploy_sdk_and_system() {
     echo "Building '$sdk-ndk' image…"
     docker build --tag $BASEIMAGE:$sdk-ndk --build-arg android_sdk_version=$sdk --file sdk-ndk.Dockerfile .
     echo "Pushing '$sdk-ndk' image…"
-    docker push $BASEIMAGE:$sdk
+    docker push $BASEIMAGE:$sdk-ndk
     echo
 
     echo "Building '$sdk' image…"
